@@ -1,32 +1,9 @@
-import { useState } from "react";
-import { getAll } from "../service";
-import { useEffect } from "react";
-
-const Header = () => {
-  const [article, setArticle] = useState({
-    title: "",
-    urlToImage: "",
-    description: "",
-    source: "",
-    author: "",
-    publishedAt: "",
-  });
-
-  useEffect(() => {
-    const articleData = getAll()[0];
-
-    setArticle({
-      ...articleData,
-      source: articleData.source.name,
-      publishedAt: Date(articleData.publishedAt).toString().slice(4, 15),
-      content: articleData.content.split("[")[0],
-    });
-  }, []);
-
+import PropTypes from "prop-types";
+const Header = ({ article }) => {
   return (
     <div>
       <header className="py-8 mt-4">
-        <div className="flex max-lg:flex-col lg:items-center">
+        <div className="flex max-lg:flex-col lg:items-center lg:gap-16">
           <h1 className="text-6xl font-normal lg:basis-1/2">{article.title}</h1>
           <div className="my-12 bg-slate-300 aspect-video max-lg:w-full">
             <img
@@ -46,7 +23,7 @@ const Header = () => {
             </div>
             <div>
               <p className="text-neutral-400">
-                {article.content}
+                {article.content.split("[")[0]}
                 <a className="underline" href={article.url}>
                   Read More
                 </a>
@@ -57,6 +34,10 @@ const Header = () => {
       </header>
     </div>
   );
+};
+
+Header.propTypes = {
+  article: PropTypes.object,
 };
 
 export default Header;

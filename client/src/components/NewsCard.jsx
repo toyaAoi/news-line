@@ -19,9 +19,9 @@ const NewsCard = ({ article }) => {
         </div>
         <h2 className="text-xl">{article.title}</h2>
         <p className="text-neutral-400">
-          <span>{article.source.name}</span>, <span>{article.author}</span>
+          <span>{article.source.name}</span> <span>{article.author}</span>
         </p>
-        <p>{Date(article.publishedAt).toString().slice(4, 15)}</p>
+        <p>{article.publishedAt}</p>
       </a>
     </article>
   );

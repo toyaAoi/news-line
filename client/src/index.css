@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply p-8 text-white bg-neutral-950 lg:px-16;
+    @apply p-8 text-white bg-neutral-950 lg:px-20;
     /* word-spacing: 0.5rem; */
   }
 }
