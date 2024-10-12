@@ -13,6 +13,9 @@ achieve two goals:
 
 ## Live Sites
 
+This might take a minute to open it for the first time. Cause Render spines down
+free web services that goes 15 minutes inactive.
+
 - Frontend: https://news-line-client.onrender.com/
 - Backend: https://news-line.onrender.com/api/top-headlines
 
