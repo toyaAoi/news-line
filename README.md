@@ -75,22 +75,11 @@ Navigate to the `client` directory and install the dependencies.
   npm install
 ```
 
-Configure `vite.config.js`:
+Then navigate to `client/src/service.js` and change the `URL` constant to you
+backend url.
 
 ```javascript
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      // Replace the url with your backend URL
-      "/api": "http://localhost:3000/",
-    },
-  },
-});
+const URL = "https://news-line.onrender.com"; // Change this
 ```
 
 Then run

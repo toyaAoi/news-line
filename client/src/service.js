@@ -1,8 +1,9 @@
 import axios from "axios";
 
+const URL = "https://news-line.onrender.com";
 export const getAll = async () => {
   try {
-    const response = await axios.get("/api/top-headlines");
+    const response = await axios.get(`${URL}/api/top-headlines`);
     const data = response.data.map((article) => {
       return {
         ...article,
