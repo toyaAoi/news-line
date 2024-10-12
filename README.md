@@ -11,7 +11,7 @@ achieve two goals:
    specified duration. This improves performance and decreases the likelihood of
    hitting rate limits.
 
-## Live Sites
+## Live URLs
 
 This might take a minute to open it for the first time. Cause Render spines down
 free web services that goes 15 minutes inactive.
