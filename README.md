@@ -11,6 +11,11 @@ achieve two goals:
    specified duration. This improves performance and decreases the likelihood of
    hitting rate limits.
 
+## Live Sites
+
+- Frontend: https://news-line-client.onrender.com/
+- Backend: https://news-line.onrender.com/api/top-headlines
+
 ## Technologies Used
 
 - **Frontend:** React
