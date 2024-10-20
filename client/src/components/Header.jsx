@@ -23,7 +23,7 @@ const Header = ({ article }) => {
             </div>
             <div>
               <p className="text-neutral-400">
-                {article.content.split("[")[0]}
+                {article.content?.split("[")[0]}
                 <a className="underline" href={article.url}>
                   Read More
                 </a>
